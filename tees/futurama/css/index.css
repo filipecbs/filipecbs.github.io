@@ -1,0 +1,19 @@
+@import "./common.css";
+
+#ver-na-wikipedia {
+	text-decoration: underline;
+}
+
+.iframe-center {
+	display: flex;
+	justify-content: center;
+}
+
+ul.episodios {
+	flex-direction: column;
+}
+
+ul.episodios li {
+	margin-bottom: 5px;
+}
+
