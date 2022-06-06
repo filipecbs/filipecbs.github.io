@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="./index.js" defer></script>
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<title>Square Progression</title>
+</head>
+<body>
+	<h1>Square Progression</h1>
+	<p>Settings:</p>
+	<form>
+		<div>
+			<label for="ratio">Ratio</label>
+			<input type="range" id="ratio" name="ratio"
+				min="0" max="1" step="0.01" value="0.5" oninput="this.nextElementSibling.value = this.value" onchange="createSquares()">
+			<input type="number" min="0" max="1" step="0.01" id="ratio-text" value="0.5" onkeypress="updateValueSlider(this.value, 'ratio');createSquares()" onclick="updateValueSlider(this.value, 'ratio');createSquares()"></input>
+		</div>
+
+		<div>
+			<label for="n">N</label>
+			<input type="range" id="n-squares" name="n"
+				min="0" max="30" step="1" value="2" oninput="this.nextElementSibling.value = this.value" onchange="createSquares()">
+			<input type="number" min="0" max="30" step="1" id="n-squares-text" value="2" onkeypress="updateValueSlider(this.value, 'n-squares'); createSquares()" onclick="updateValueSlider(this.value, 'n-squares'); createSquares()"></input>
+		</div>
+		<div>
+			<label>Variation</label>
+			<input type="radio" id="zero" name="variation" value="0"checked="checked" onclick="createSquares()">
+			<label for="zero">0</label>
+			<input type="radio" id="one" name="variation" value="1" onclick="createSquares()">
+			<label for="one">1</label>
+			<input type="radio" id="two" name="variation" value="2" onclick="createSquares()">
+			<label for="two">2</label>
+			<input type="radio" id="three" name="variation" value="3" onclick="createSquares()">
+			<label for="three">3</label>
+		</div>
+	</form>
+	<br>
+
+</body>
+</html>
